@@ -12,6 +12,7 @@
                     class="hidden-xs-only">
                 <v-icon>{{ item.icon }}</v-icon>
                 <v-btn
+                        exact
                         router
                         :to="item.link"
                         flat>{{item.title}}</v-btn>
@@ -25,6 +26,7 @@
                 <v-list-tile
                         v-for="item in menuItems"
                         :key="item.title"
+                        exact
                         router
                         :to="item.link"
                 >
