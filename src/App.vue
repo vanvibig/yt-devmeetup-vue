@@ -1,7 +1,9 @@
 <template>
     <v-app>
         <v-toolbar dark class="purple darken-1">
-            <v-toolbar-side-icon class="hidden-sm-and-up" @click.native="sideNav = !sideNav"></v-toolbar-side-icon>
+            <v-toolbar-side-icon class="hidden-sm-and-up"
+                                 @click="sideNav = !sideNav">
+            </v-toolbar-side-icon>
             <v-toolbar-title>
                 <router-link to="/" tag="span" style="cursor: pointer">Dev Meetup</router-link>
             </v-toolbar-title>
@@ -13,7 +15,6 @@
                 <v-icon>{{ item.icon }}</v-icon>
                 <v-btn
                         exact
-                        router
                         :to="item.link"
                         flat>{{item.title}}
                 </v-btn>
@@ -28,7 +29,6 @@
                         v-for="item in menuItems"
                         :key="item.title"
                         exact
-                        router
                         :to="item.link"
                 >
                     <v-list-tile-action>
