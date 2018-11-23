@@ -15,13 +15,14 @@
                         exact
                         router
                         :to="item.link"
-                        flat>{{item.title}}</v-btn>
+                        flat>{{item.title}}
+                </v-btn>
             </v-toolbar-items>
         </v-toolbar>
         <main>
             <router-view></router-view>
         </main>
-        <v-navigation-drawer v-model="sideNav">
+        <v-navigation-drawer absolute temporary v-model="sideNav">
             <v-list>
                 <v-list-tile
                         v-for="item in menuItems"
